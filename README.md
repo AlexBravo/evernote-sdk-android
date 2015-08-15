@@ -10,7 +10,89 @@ This SDK wraps the [Evernote Cloud API ](http://dev.evernote.com/documentation/c
 
 Prerequisites
 -------------
+<<<<<<< Updated upstream
 In order to use the code in this SDK, you need to obtain an API key from https://dev.evernote.com/doc/. You'll also find full API documentation on that page.
+=======
+In order to use the code in this SDK, you need to obtain an API key from http://dev.evernote.com/documentation/cloud. You'll also find full API documentation on that page.
+
+In order to run the sample code, you need a user account on the sandbox service where you will do your development. Sign up for an account at https://sandbox.evernote.com/Registration.action
+
+The instructions below assume you have the latest [Android SDK](http://developer.android.com/sdk/index.html) and [API 17](http://developer.android.com/tools/revisions/platforms.html#4.2) installed. The instructions for eclipse are based on [Eclipse Juno](http://www.eclipse.org/downloads/) and [latest Android development tools](http://developer.android.com/tools/sdk/eclipse-adt.html). The instructions for Intellij are based on [Intellij IDEA 12 Community Edition](http://www.jetbrains.com/idea/download/index.html) and is our recommended IDE.
+
+
+Sample App
+----------
+The sample application HelloEDAM demonstrates how to use the Evernote SDK for Android to authentication to the Evernote service using OAuth, then access the user's Evernote account. The sample code provides mutliple activities that show notebook listing, note creation, and resource creation in two scenarios: A plain text note creator and an image saver.
+
+###  Running the sample app from Eclipse
+To build and run the sample project from Eclipse:
+
+1. Open Eclipse
+2. From the File menu, choose New and then Project...
+3. Under Android, select "Android Project from Existing Code" and click Next
+4. Click Browse
+5. Select the SDK root directory (the directory containing this README) and click OK
+6. Click Finish
+7. Right click HelloEDAM, click properties, click Java Build Path, click the Projects tab,
+8. Click Add and select library, click ok to accept changes.
+9. From the Package Explorer, expand the HelloEDAM project's `src` directory and open `com.evernote.android.sample.ParentActivity.java`
+10. At the top of `ParentActivity.java`, fill in your Evernote API consumer key and secret.
+11. Build and run the project
+
+###  Running the sample app from Intellij
+To build and run the sample project from Intellij:
+
+1. Open Intellij
+2. From the File menu, choose Import Project...
+3. Select the SDK root directory (the directory containing this README) and click Open
+4. Select Create project from existing sources and Click Next
+5. Click Next, Next, Next, Next
+6. Select Android 4.2 Google APIs and click Next
+7. Click Finish
+8. From the Project Explorer, expand the HelloEDAM project's `src` directory and open `com.evernote.android.sample.ParentActivity.java`
+9. At the top of `ParentActivity.java`, fill in your Evernote API consumer key and secret.
+10. Build and run the project
+
+
+Using the SDK in your app
+-------------------------
+There are two ways to include the SDK in your project: by including and building the Android Library Project in your IDE or by using Maven.
+
+### Include the Android Library Project in your Eclipse workspace
+
+1. Import the Android Library Project
+   1. Open Eclipse
+   2. From the File menu, choose New and then Project...
+   3. Under Android, select "Android Project from Existing Code" and click Next
+   4. Click Browse
+   5. Select the library directory and click Open
+   6. Click Finish
+1. Add the Android Library Project as a dependency in your app
+   7. Right-click on your project and choose "Properties"
+   8. In the Android section, in the Library area, click Add...
+   9. Select library from the list and click OK
+   10. Click Java Build Path and then select the Projects tab
+   11. Click Add...
+   12. Select Library and click OK
+   13. Click OK
+
+### Include the Android Library Project in your Intellij workspace
+
+1. Right click your project and choose Open Module Properties
+2. Select the Plus Icon (Add) at the top and choose Import Module
+3. Select the library directory and click OK
+4. Click Next, Next, Next, Next
+5. Click Finish
+6. Click your project and select the Dependencies tab
+7. Click the Plus Icon (Add) at the bottom and select 3 Module Dependency
+8. Select library and click OK
+
+### Use Maven
+
+If you build your app using Maven, you can simply add the Evernote SDK for Android as a dependency in your pom.xml.
+
+Add the Evernote SDK for Android as a dependency:
+>>>>>>> Stashed changes
 
 In order to run the demo code, you need a user account on the sandbox service where you will do your development. Sign up for an account at https://sandbox.evernote.com/Registration.action
 
